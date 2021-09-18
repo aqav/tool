@@ -1,4 +1,4 @@
-^!w::
+^!t::
 IfWinExist, ahk_class CASCADIA_HOSTING_WINDOW_CLASS
 {
     WinGet, AC, MinMax, ahk_class CASCADIA_HOSTING_WINDOW_CLASS

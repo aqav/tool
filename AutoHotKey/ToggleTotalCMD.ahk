@@ -9,7 +9,7 @@ IfWinExist, ahk_class TTOTAL_CMD
             Winactivate, ahk_class TTOTAL_CMD
         else
             Winminimize, ahk_class TTOTAL_CMD
-   }
+    }
 } else {
     WinWait, ahk_class TTOTAL_CMD
     IfWinNotActive, ahk_class TTOTAL_CMD
