@@ -1,3 +1,4 @@
+; Total Commander
 ^!c::
 WinGet, Var, MinMax, ahk_class TTOTAL_CMD
 if Var = -1
@@ -14,6 +15,7 @@ else
 }
 return
 
+; Windows Terminal
 ^!t::
 WinGet, Var, MinMax, ahk_class CASCADIA_HOSTING_WINDOW_CLASS
 if Var = -1
