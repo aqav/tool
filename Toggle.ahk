@@ -28,3 +28,17 @@ else
         WinMinimize, ahk_class CASCADIA_HOSTING_WINDOW_CLASS
 }
 return
+
+; OneNote
+^!n::
+WinGet, Var, MinMax, ahk_class Framework::CFrame
+if Var = -1
+    WinActivate, ahk_class Framework::CFrame
+else 
+{
+    IfWinNotActive, ahk_class Framework::CFrame
+        WinActivate, ahk_class Framework::CFrame
+    else
+        WinMinimize, ahk_class Framework::CFrame
+}
+return
