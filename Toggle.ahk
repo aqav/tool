@@ -42,3 +42,17 @@ else
         WinMinimize, ahk_class Framework::CFrame
 }
 return
+
+; ThunderBird
+^!e::
+WinGet, Var, MinMax, ahk_class MozillaWindowClass
+if Var = -1
+    WinActivate, ahk_class MozillaWindowClass
+else
+{
+    IfWinNotActive, ahk_class MozillaWindowClass
+        WinActivate, ahk_class MozillaWindowClass
+    else
+        WinMinimize, ahk_class MozillaWindowClass
+}
+return
