@@ -44,7 +44,7 @@ else
 return
 
 ; ThunderBird
-^!e::
+^!b::
 WinGet, Var, MinMax, ahk_class MozillaWindowClass
 if Var = -1
     WinActivate, ahk_class MozillaWindowClass
