@@ -1,45 +1,78 @@
-; Total Commander
 ^!c::
-WinGet, Var, MinMax, ahk_class TTOTAL_CMD
+WinGet, Var, MinMax, ahk_exe chrome.exe
 if Var = -1
-    WinActivate, ahk_class TTOTAL_CMD
-else
+    WinActivate, ahk_exe chrome.exe
+else 
 {
-    IfWinNotActive, ahk_class TTOTAL_CMD
-    {
-        WinShow, ahk_class TTOTAL_CMD
-        WinActivate, ahk_class TTOTAL_CMD
-    }
+    IfWinNotActive, ahk_exe chrome.exe
+        WinActivate, ahk_exe chrome.exe
     else
-        WinMinimize, ahk_class TTOTAL_CMD
+        WinMinimize, ahk_exe chrome.exe
 }
 return
 
-; Windows Terminal
+^!s::
+WinGet, Var, MinMax, ahk_exe Obsidian.exe
+if Var = -1
+    WinActivate, ahk_exe Obsidian.exe
+else 
+{
+     IfWinNotActive, ahk_exe Obsidian.exe
+        WinActivate, ahk_exe Obsidian.exe
+    else
+        WinMinimize, ahk_exe Obsidian.exe
+}
+return
+
 ^!t::
-WinGet, Var, MinMax, ahk_class CASCADIA_HOSTING_WINDOW_CLASS
+WinGet, Var, MinMax, ahk_exe WindowsTerminal.exe
 if Var = -1
-    WinActivate, ahk_class CASCADIA_HOSTING_WINDOW_CLASS
-else
+    WinActivate, ahk_exe WindowsTerminal.exe
+else 
 {
-    IfWinNotActive, ahk_class CASCADIA_HOSTING_WINDOW_CLASS
-        WinActivate, ahk_class CASCADIA_HOSTING_WINDOW_CLASS
+    IfWinNotActive, ahk_exe WindowsTerminal.exe
+        WinActivate, ahk_exe WindowsTerminal.exe
     else
-        WinMinimize, ahk_class CASCADIA_HOSTING_WINDOW_CLASS
+        WinMinimize, ahk_exe WindowsTerminal.exe
 }
 return
 
-; OneNote
 ^!n::
-WinGet, Var, MinMax, ahk_class Framework::CFrame
+WinGet, Var, MinMax, ahk_exe ONENOTE.EXE
 if Var = -1
-    WinActivate, ahk_class Framework::CFrame
-else
+    WinActivate, ahk_exe ONENOTE.EXE
+else 
 {
-    IfWinNotActive, ahk_class Framework::CFrame
-        WinActivate, ahk_class Framework::CFrame
+    IfWinNotActive, ahk_exe ONENOTE.EXE
+        WinActivate, ahk_exe ONENOTE.EXE
     else
-        WinMinimize, ahk_class Framework::CFrame
+        WinMinimize, ahk_exe ONENOTE.EXE
+}
+return
+
+^!r::
+WinGet, Var, MinMax, ahk_exe thunderbird.exe
+if Var = -1
+    WinActivate, ahk_exe thunderbird.exe
+else 
+{
+     IfWinNotActive, ahk_exe thunderbird.exe
+        WinActivate, ahk_exe thunderbird.exe
+    else
+        WinMinimize, ahk_exe thunderbird.exe
+}
+return
+
+^!f::
+WinGet, Var, MinMax, ahk_exe TotalCMD64.exe
+if Var = -1
+    WinActivate, ahk_exe TotalCMD64.exe
+else 
+{
+     IfWinNotActive, ahk_exe TotalCMD64.exe
+        WinActivate, ahk_exe TotalCMD64.exe
+    else
+        WinMinimize, ahk_exe TotalCMD64.exe
 }
 return
 
